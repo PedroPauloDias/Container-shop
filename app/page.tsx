@@ -17,8 +17,10 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <Suspense>
-    <HeroHeader/>
+  <Suspense >
+  <div className=' pb-8' >
+    <HeroHeader />
+    </div>
       <ThreeItemGrid />
       <Suspense>
         <Carousel />

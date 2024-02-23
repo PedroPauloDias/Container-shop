@@ -7,9 +7,8 @@ export default function HeroHeader() {
 
 
   return (
-    <div className='w-full h-[450px]  text-white relative'> 
+    <div className='w-full h-[450px]  text-white relative bg-zinc-100'> 
       <Image src={banner} alt='' fill  />
-      <p>testando </p>
     </div>
   )
 }

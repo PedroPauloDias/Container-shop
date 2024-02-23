@@ -3,6 +3,8 @@ import { ThreeItemGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
 
+import HeroHeader  from 'components/heroHeader';
+
 export const runtime = 'edge';
 
 export const metadata = {
@@ -15,12 +17,15 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
+      <Suspense>
+    <HeroHeader/>
       <ThreeItemGrid />
       <Suspense>
         <Carousel />
         <Suspense>
           <Footer />
         </Suspense>
+      </Suspense>
       </Suspense>
     </>
   );

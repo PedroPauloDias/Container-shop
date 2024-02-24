@@ -2,8 +2,7 @@ import { Carousel } from 'components/carousel';
 import { ThreeItemGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
-
-import HeroHeader  from 'components/heroHeader';
+import HeroHeader from 'components/heroHeader';
 
 export const runtime = 'edge';
 
@@ -17,17 +16,17 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-  <Suspense >
-  <div className=' pb-8' >
-    <HeroHeader />
-    </div>
-      <ThreeItemGrid />
       <Suspense>
-        <Carousel />
+        <div className=" pb-8">
+          <HeroHeader />
+        </div>
+        <ThreeItemGrid />
         <Suspense>
-          <Footer />
+          <Carousel />
+          <Suspense>
+            <Footer />
+          </Suspense>
         </Suspense>
-      </Suspense>
       </Suspense>
     </>
   );

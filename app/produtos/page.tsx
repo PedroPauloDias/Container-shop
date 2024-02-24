@@ -3,21 +3,17 @@ import { getCollectionProducts } from 'lib/shopify';
 import Link from 'next/link';
 import { GridTileImage } from 'components/grid/tile';
 
-export default async function About() {
+export default async function Produtos() {
   const products = await getCollectionProducts({ collection: 'hidden-homepage-carousel' });
 
   if (!products?.length) return null;
 
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>This is the about page of our website.</p>
-      <ul className="flex animate-carousel gap-4">
+    <div className="flex flex-col gap-8 p-4  ">
+      <h1 className="text-4xl">Produtos</h1>
+      <ul className="flex flex-col gap-4 ">
         {products.map((product, i) => (
-          <li
-            key={`${product.handle}${i}`}
-            className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
-          >
+          <li key={`${product.handle}${i}`} className="relative aspect-square flex-none ">
             <Link href={`/product/${product.handle}`} className="relative h-full w-full">
               <GridTileImage
                 alt={product.title}

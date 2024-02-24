@@ -53,12 +53,12 @@ export async function ThreeItemGrid() {
   return (
     <section className="mx-auto p-4 ">
       <div className="rounded-xl border">
-        <div className="grid max-w-screen-2xl  gap-4 px-4 pb-4 pt-4 md:grid-cols-6   md:grid-rows-2">
+        <div className="grid max-w-screen-2xl  gap-4 px-4 pb-2 pt-4 md:grid-cols-6   md:grid-rows-2">
           <ThreeItemGridItem size="full" item={firstProduct} priority={true} />
           <ThreeItemGridItem size="half" item={secondProduct} priority={true} />
           <ThreeItemGridItem size="half" item={thirdProduct} />
         </div>
-        <Link href="/about" className="flex w-full items-center justify-end p-2 px-4">
+        <Link href="/about" className="flex w-full items-center justify-end px-4 pb-2">
           <p className="text-xs">ver todos </p>
           <ChevronRightIcon className="h-4" />
         </Link>

@@ -58,10 +58,7 @@ export async function ThreeItemGrid() {
           <ThreeItemGridItem size="half" item={secondProduct} priority={true} />
           <ThreeItemGridItem size="half" item={thirdProduct} />
         </div>
-        <Link
-          href="/produtos"
-          className="flex w-full items-center justify-end bg-red-900 px-4 pb-2"
-        >
+        <Link href="/produtos" className="flex w-full items-center justify-end  px-4 pb-2">
           <p className="text-xs">ver todos </p>
           <ChevronRightIcon className="h-4" />
         </Link>
